@@ -22,6 +22,7 @@
         <div class="body1">
           <div ng-controller="SecureController">
 
+
             <div>
               <h4>Visual Recognition using Clarifai API</h4>
               <button class="button2" ng-click="generate()">Predict</button>
@@ -36,10 +37,12 @@
             <h4>  Positive:  {{analyzelang.positive | number:2}}%<br> </h4>
              <h4>Negative:  {{analyzelang.negative | number:2}}% </h4>
             </p>
+            <h4 class="head">Enter the text to translate</h4>
             <input type="text1" id="translate1" placeholder="Enter text to translate" ng-model="trans1" class="come">
 
             <button class="btn btn-primary" ng-click="translate()">Translate</button>
             <h4>Output : {{output}}</h4>
+            <h4 class="head">Enter the location </h4>
             <input type="text1" id="weather" placeholder="Enter text to get Temp" ng-model="weather1" class="come">
             <button class="btn btn-primary" ng-click="weather()">Weather</button>
             <h4>Temperature : {{temp}}</h4>
@@ -47,7 +50,12 @@
             <h4>Pressure : {{pressure}}</h4>
             <h4>Wind : {{wind}}</h4>
             <input type="button2" class="button" value="Maps" onclick="location.href ='location.html'"/>
+
+
+
             <button class="button3" ng-click="logout()">Logout</button>
+
+
 
           </div>
         </div>
