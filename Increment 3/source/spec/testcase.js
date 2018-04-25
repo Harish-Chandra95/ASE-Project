@@ -8,23 +8,23 @@ describe("Validatelogin", function() {
     $controller('Validatelogin', {$scope: scope});
   }));
 
-  it("check if username and password is empty", function() {
+  it("Check for the Username and Password if they are empty", function() {
 
     scope.Valid('','');
-    expect(scope.temp).toEqual("username and password can not be empty");
+    expect(scope.temp).toEqual("Username and Password cannot be empty");
   });
 
 
-  it("check if username is empty", function() {
+  it("Check if Username is empty", function() {
 
-    scope.Valid('','harish');
-    expect(scope.temp).toEqual("username can not be empty");
+    scope.Valid('','Sindhuja');
+    expect(scope.temp).toEqual("Username cannot be empty");
   });
 
-  it("check if  password is empty", function() {
+  it("Check if  Password is empty", function() {
 
-    scope.Valid('sharath','');
-    expect(scope.temp).toEqual("password can not be empty");
+    scope.Valid('Ratnavalli','');
+    expect(scope.temp).toEqual("Password cannot be empty");
   });
 
 });

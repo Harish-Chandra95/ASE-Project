@@ -14901,8 +14901,8 @@ function $CacheFactoryProvider() {
  * Adding via the `$templateCache` service:
  *
  * ```js
- * var MyApp = angular.module('MyApp', []);
- * MyApp.run(function($templateCache) {
+ * var App = angular.module('App', []);
+ * App.run(function($templateCache) {
  *   $templateCache.put('templateId.html', 'This is the content of the template');
  * });
  * ```
@@ -25262,7 +25262,7 @@ function adjustMatchers(matchers) {
  * Here is what a secure configuration for this scenario might look like:
  *
  * ```
- *  angular.module('MyApp', []).config(function($sceDelegateProvider) {
+ *  angular.module('App', []).config(function($sceDelegateProvider) {
  *    $sceDelegateProvider.resourceUrlWhitelist([
  *      // Allow same origin resource loads.
  *      'self',
@@ -41903,14 +41903,14 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  *
  * <pre>
  * <!doctype html>
- * <html ng-app="MyApp">
+ * <html ng-app="App">
  * <head>
  *   <script src="js/angular.js"></script>
  *   <!-- Include the ui-router script -->
  *   <script src="js/angular-ui-router.min.js"></script>
  *   <script>
  *     // ...and add 'ui.router' as a dependency
- *     var MyApp = angular.module('MyApp', ['ui.router']);
+ *     var App = angular.module('App', ['ui.router']);
  *   </script>
  * </head>
  * <body>
@@ -47344,9 +47344,9 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
  *
  * @usage
  * ```js
- * var MyApp = angular.module('reallyCoolApp', ['ionic']);
+ * var App = angular.module('reallyCoolApp', ['ionic']);
  *
- * MyApp.config(function($ionicConfigProvider) {
+ * App.config(function($ionicConfigProvider) {
  *   $ionicConfigProvider.views.maxCache(5);
  *
  *   // note that you can also chain configs
@@ -48009,7 +48009,7 @@ var LOADING_SET_DEPRECATED = '$ionicLoading instance.setContent() has been depre
  *
  * @usage
  * ```js
- * var app = angular.module('MyApp', ['ionic'])
+ * var app = angular.module('App', ['ionic'])
  * app.constant('$ionicLoadingConfig', {
  *   template: 'Default Loading Template...'
  * });
@@ -50108,7 +50108,7 @@ IonicModule
  * in the `$state` definition
  *
  * ```js
- *   angular.module('MyApp', ['ionic'])
+ *   angular.module('App', ['ionic'])
  *   .config(function($stateProvider, $ionicConfigProvider) {
  *
  *     // disable preemptive template caching globally
@@ -57324,7 +57324,7 @@ IonicModule
  * Next, we need to setup our states that will be rendered.
  *
  * ```js
- * var app = angular.module('MyApp', ['ionic']);
+ * var app = angular.module('App', ['ionic']);
  * app.config(function($stateProvider) {
  *   $stateProvider
  *   .state('index', {

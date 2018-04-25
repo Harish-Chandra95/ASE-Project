@@ -1,6 +1,6 @@
-var MyApp=angular.module("starter", ["ionic","ngCordova","firebase"]);
+var App=angular.module("starter", ["ionic","ngCordova","firebase"]);
 
-MyApp.run(function($ionicPlatform) {
+App.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -11,7 +11,7 @@ MyApp.run(function($ionicPlatform) {
   });
 });
 
-MyApp.config(function($stateProvider, $urlRouterProvider) {
+App.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state("firebase", {
       url: "/firebase",
@@ -27,7 +27,7 @@ MyApp.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/firebase');
 });
 
-MyApp.controller("FirebaseController", function($scope, $state, $firebaseAuth) {
+App.controller("FirebaseController", function($scope, $state, $firebaseAuth) {
 
   var fbAuth = $firebaseAuth();
 
@@ -54,7 +54,7 @@ MyApp.controller("FirebaseController", function($scope, $state, $firebaseAuth) {
 
 //secure controller
 
-MyApp.controller("SecureController", function($scope, $http, $ionicHistory, $firebaseObject, $firebaseArray, $firebaseAuth, $cordovaCamera, $state, $window) {
+App.controller("SecureController", function($scope, $http, $ionicHistory, $firebaseObject, $firebaseArray, $firebaseAuth, $cordovaCamera, $state, $window) {
 
   $ionicHistory.clearHistory();  //for clearing user login history
 
@@ -88,7 +88,7 @@ MyApp.controller("SecureController", function($scope, $http, $ionicHistory, $fir
     };
     $cordovaCamera.getPicture(options).then(function(imageData) {
       syncArray.$add({image: imageData}).then(function() {
-        alert("Image has been uploaded");
+        alert("Image uploaded");
       });
     }, function(error) {
       console.error(error);

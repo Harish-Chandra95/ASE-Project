@@ -285,14 +285,14 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  *
  * <pre>
  * <!doctype html>
- * <html ng-app="MyApp">
+ * <html ng-app="App">
  * <head>
  *   <script src="js/angular.js"></script>
  *   <!-- Include the ui-router script -->
  *   <script src="js/angular-ui-router.min.js"></script>
  *   <script>
  *     // ...and add 'ui.router' as a dependency
- *     var MyApp = angular.module('MyApp', ['ui.router']);
+ *     var App = angular.module('App', ['ui.router']);
  *   </script>
  * </head>
  * <body>
