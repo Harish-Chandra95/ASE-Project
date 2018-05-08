@@ -9,19 +9,19 @@ angular.module('Validlogin', ['ionic']).controller('Validatelogin', function ($s
     if($scope.uname == '' && $scope.pwd == '' )
     {
 
-      $scope.temp = "username and password can not be empty";
+      $scope.temp = "Username and Password cannot be empty";
     }
 
     else if($scope.uname == '')
     {
 
-      $scope.temp = "username can not be empty";
+      $scope.temp = "Username cannot just be empty";
     }
 
     else
     {
 
-      $scope.temp = "password can not be empty";
+      $scope.temp = "Password cannot just be empty";
     }
 
   }
